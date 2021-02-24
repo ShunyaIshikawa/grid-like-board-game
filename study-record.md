@@ -13,3 +13,17 @@
   - 現象：ピクセル絵がぼやけてしまう。
   - 解決：画像＞`インスペクター`＞`フィルターモード`を`ポイント（フィルターなし）`に変更する。
   - 参考：[【Unity】ドット絵がぼやけてしまう問題を解決する方法](https://baba-s.hatenablog.com/entry/2018/01/31/213000)
+
+- SerializeFieldの使い方
+  - `[SerializeField]`を付けると、インスペクターウィンドウでその変数が編集できる。
+  - `public`の場合、編集もできるし、他クラスが書き換えることもできる。
+  - `[SerializeField] private`とは書かなくてもよい。
+    - 修飾子を書かない場合、暗黙で`private`となる。
+  - `[HideInInspector]`を付けると、ウィンドウからは編集できない。シリアライゼーションは行われる。
+    - `[HideInInspector] public`と使える。
+  - `[System.NonSerialized]`を付けると、そもそもシリアライゼーションが行われない。
+  - 参考：[Unityの[SerializeField]について色々な疑問に答えてみる](https://qiita.com/makopo/items/8ef280b00f1cc18aec91#serializefield-private)
+
+- オブジェクトをドラッグ＆ドロップで動かす
+  - `WorldToScreenPoint`関数と`ScreenToWorldPoint`をうまく組み合わせる。
+  - 参考：[Unityでオブジェクトをドラッグ＆ドロップにあわせて動かす（2D）](https://qiita.com/ReoNagai/items/1becdea9e6fa9b55c82a)

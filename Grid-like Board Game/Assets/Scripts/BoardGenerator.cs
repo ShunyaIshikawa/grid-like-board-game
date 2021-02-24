@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BoardGenerator : MonoBehaviour
 {
-    public GameObject boardPrefab;
+    [SerializeField] GameObject boardPrefab;
 
     // Set grid numbers
-    public int width;
-    public int height;
+    [SerializeField] int width;
+    [SerializeField] int height;
 
     private float len;
 

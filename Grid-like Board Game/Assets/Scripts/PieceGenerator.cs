@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PieceGenerator : MonoBehaviour
 {
-    public BoardGenerator b;
-    public GameObject piecePrefab;
+    [SerializeField] BoardGenerator b;
+    [SerializeField] GameObject piecePrefab;
 
     private float len;
 
