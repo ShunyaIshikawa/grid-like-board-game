@@ -8,3 +8,8 @@
   - 原因：Gitが改行コードをCRLFへ自動変更しようとしている。
   - 解決：`git config --global core.autoCRLF false`を実行する。
   - 参考：[git addしたらCRLF will be replaced by LFなエラー](https://qiita.com/suzuki-koya/items/6b9f1e79b9d662e15afe)
+
+- ピクセル絵の画像をUnityに取り込むとぼやける
+  - 現象：ピクセル絵がぼやけてしまう。
+  - 解決：画像＞`インスペクター`＞`フィルターモード`を`ポイント（フィルターなし）`に変更する。
+  - 参考：[【Unity】ドット絵がぼやけてしまう問題を解決する方法](https://baba-s.hatenablog.com/entry/2018/01/31/213000)
