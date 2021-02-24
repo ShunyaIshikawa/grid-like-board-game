@@ -282,7 +282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   b: {fileID: 1649550060}
-  piecePrefab: {fileID: 3146716653094417596, guid: 10a9b0fa86c9bf941a5824fc668b9255, type: 3}
+  redPiecePrefab: {fileID: 3146716653094417596, guid: 10a9b0fa86c9bf941a5824fc668b9255, type: 3}
+  blackPiecePrefab: {fileID: 3146716653094417596, guid: 42dd445291b583d40b27010d53c942cf, type: 3}
 --- !u!4 &1711017895
 Transform:
   m_ObjectHideFlags: 0

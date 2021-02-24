@@ -5,7 +5,8 @@ using UnityEngine;
 public class PieceGenerator : MonoBehaviour
 {
     [SerializeField] BoardGenerator b;
-    [SerializeField] GameObject piecePrefab;
+    [SerializeField] GameObject redPiecePrefab;
+    [SerializeField] GameObject blackPiecePrefab;
 
     private float len;
 
@@ -16,11 +17,20 @@ public class PieceGenerator : MonoBehaviour
 
     void Update()
     {
+        // generate a red piece
         if(Input.GetKeyDown(KeyCode.D))
         {
-            GameObject g = Instantiate(piecePrefab) as GameObject;
+            GameObject g = Instantiate(redPiecePrefab) as GameObject;
             g.transform.localScale = new Vector2(len, len);
             g.transform.position = new Vector3(7, 0, -1);
+        }
+
+        // generate a black piece
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            GameObject g = Instantiate(blackPiecePrefab) as GameObject;
+            g.transform.localScale = new Vector2(len, len);
+            g.transform.position = new Vector3(-7, 0, -1);
         }
     }
 }
