@@ -27,3 +27,10 @@
 - オブジェクトをドラッグ＆ドロップで動かす
   - `WorldToScreenPoint`関数と`ScreenToWorldPoint`をうまく組み合わせる。
   - 参考：[Unityでオブジェクトをドラッグ＆ドロップにあわせて動かす（2D）](https://qiita.com/ReoNagai/items/1becdea9e6fa9b55c82a)
+
+- テキストUIに対して、`GetComponent<Text>().text`が出来ない
+  - 問題：次のようなエラーが出る。
+    ```
+    The type or namespace name 'Text' could not be found
+    ```
+  - 解決：`using UnityEngine.UI`をプログラム冒頭に記す。
