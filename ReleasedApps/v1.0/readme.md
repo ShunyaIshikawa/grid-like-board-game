@@ -1,0 +1,4 @@
+- Launch `Grid-like Board Game.exe`.
+- Push `A` to generate a black piece.
+- Push `D` to generate a red piece.
+- Push `S` to update a random number (1 ~ 6).

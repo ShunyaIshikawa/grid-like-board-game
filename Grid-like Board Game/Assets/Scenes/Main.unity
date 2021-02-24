@@ -341,10 +341,10 @@ RectTransform:
   m_Father: {fileID: 441999170}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 826, y: 416}
-  m_SizeDelta: {x: 142.5688, y: 115}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -134, y: -124}
+  m_SizeDelta: {x: 142.56885, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
@@ -525,8 +525,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardPrefab: {fileID: 1071856453099641497, guid: c7677c1ad6c460447800b33ad02c554d, type: 3}
-  width: 6
-  height: 6
+  width: 8
+  height: 8
 --- !u!4 &1649550061
 Transform:
   m_ObjectHideFlags: 0
