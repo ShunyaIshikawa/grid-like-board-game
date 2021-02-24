@@ -7,12 +7,14 @@ public class BoardGenerator : MonoBehaviour
     public GameObject boardPrefab;
 
     // Set grid numbers
-    public int width = 9;
-    public int height = 9;
+    public int width;
+    public int height;
 
-    void Start()
+    private float len;
+
+    void Awake()
     {
-        float len = 8f / Mathf.Max(width, height);
+        len = 8f / Mathf.Max(width, height);
 
         // Initialize the scale
         boardPrefab.transform.localScale = new Vector2(3.12f * len, 3.12f * len);
@@ -25,5 +27,10 @@ public class BoardGenerator : MonoBehaviour
                 newImg.transform.position = new Vector3(-4f + 8f/(width*2) + j*len, -4f + 8f/(height*2) + i*len, 0);
             }
         }
+    }
+
+    public float GetLen()
+    {
+        return len;
     }
 }
