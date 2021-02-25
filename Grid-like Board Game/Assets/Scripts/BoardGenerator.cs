@@ -7,10 +7,10 @@ public class BoardGenerator : MonoBehaviour
     [SerializeField] GameObject boardPrefab;
 
     // Set grid numbers
-    [SerializeField] int width;
-    [SerializeField] int height;
+    [SerializeField] static int width;
+    [SerializeField] static int height;
 
-    private float len;
+    private static float len;
 
     void Awake()
     {
@@ -29,8 +29,18 @@ public class BoardGenerator : MonoBehaviour
         }
     }
 
-    public float GetLen()
+    public static float GetLen()
     {
         return len;
+    }
+
+    public static void SetWidth(int w)
+    {
+        width = w;
+    }
+
+    public static void SetHeight(int h)
+    {
+        height = h;
     }
 }
