@@ -59,3 +59,14 @@
 
 - Canvasの文字がぼやける
   - 解決：[【unity】Textがぼやけるときの対処](https://qiita.com/tyoberiba225/items/3a44d6b2456b61166276)
+
+- シーンを変更する
+  - ビルド設定で、シーンを登録する。
+  - `using UnityEngine.SceneManagement`を記し、`SceneManager.LoadScene("SceneName")`を使う。
+  - 参考：[3分でできる！Unityでシーン（Scene）を移動・遷移・切り替える方法](https://freesworder.net/unity-scene-change/)
+
+- ボタンを押したらシーンを変更するようにする
+  - Buttonオブジェクトを作成する。
+  - ボタンのインスペクターで、`On Click()`の欄を設定する。
+    - `SceneManager.cs`のシーン変更関数をそこに登録する。
+  - 参考：[【uGUI】Buttonの使い方](https://qiita.com/2dgames_jp/items/b3d7d204895d67742d0c)
