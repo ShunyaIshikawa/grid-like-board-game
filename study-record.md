@@ -1,7 +1,7 @@
 # 2021.02.24
 
 - `git add .`時のエラーについて
-  - 現象：次のようなエラーが多数出た。
+  - 問題：次のようなエラーが多数出た。
     ```
     warning: LF will be replaced by CRLF in Grid-like Board Game/Library/PackageCache/com.unity.collab-proxy@1.3.9/package.json.The file will have its original line endings in your working directory
     ```
@@ -34,3 +34,39 @@
     The type or namespace name 'Text' could not be found
     ```
   - 解決：`using UnityEngine.UI`をプログラム冒頭に記す。
+
+# 2021.02.25
+
+- 入力フィールドの使い方
+  - 参考：[【Unity uGUI】InputFieldを用いてテキスト入力を受け取る方法](https://xr-hub.com/archives/11035)
+
+- シーン間で変数をやり取りする方法
+  - 解決：変数、getter、setterにstatic修飾子を付けて、getterとsetterにアクセスする。
+  - 注意：`public static`とすると思わぬアクセスを許すので注意。
+    - `[SerializeField] static`とすると、修飾子がないことがprivateと解釈され、上の問題を防げそう。
+  - 参考：[Unity シーン間で変数を共有する方法](https://qiita.com/YuwUnknown/items/afdc9cd01de7c559ba60)
+  - 参考：[【Unity】他のSceneに変数などの情報を渡すカンタンな方法](https://qiita.com/tamoco/items/f5a5015bb1721fbec743)
+  - データを書き込んだり読んだりする外部ファイル（csvやjsonなど）を利用しても解決しそう。
+
+- InputFieldに関するエラーが出る
+  - 問題：再生時に次のエラーが出続ける。
+    ```
+    FormatException: Input string was not in a correct format.
+    ```
+  - 原因：入力文字列を整数に変換する`int.Parse(str)`の引数が不正な状況が発生していた。
+  - 解決：`bool int.TryParse(str, out num)`を使う。
+  - 参考：[【Unity,C#】型変換のときに例外でも止めずに実行を続ける（TryParse）](https://www.hanachiru-blog.com/entry/2019/12/02/131958)
+
+- Canvasの文字がぼやける
+  - 解決：[【unity】Textがぼやけるときの対処](https://qiita.com/tyoberiba225/items/3a44d6b2456b61166276)
+
+- シーンを変更する
+  - ビルド設定で、シーンを登録する。
+  - `using UnityEngine.SceneManagement`を記し、`SceneManager.LoadScene("SceneName")`を使う。
+  - 参考：[3分でできる！Unityでシーン（Scene）を移動・遷移・切り替える方法](https://freesworder.net/unity-scene-change/)
+
+- ボタンを押したらシーンを変更するようにする
+  - Buttonオブジェクトを作成する。
+  - ボタンのインスペクターで、`On Click()`の欄を設定する。
+    - `SceneManager.cs`のシーン変更関数をそこに登録する。
+  - 参考：[【uGUI】Buttonの使い方](https://qiita.com/2dgames_jp/items/b3d7d204895d67742d0c)

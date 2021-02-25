@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PieceGenerator : MonoBehaviour
 {
-    [SerializeField] BoardGenerator b;
     [SerializeField] GameObject redPiecePrefab;
     [SerializeField] GameObject blackPiecePrefab;
 
@@ -12,7 +11,7 @@ public class PieceGenerator : MonoBehaviour
 
     void Start()
     {
-        len = b.GetLen() * 0.8f;
+        len = BoardGenerator.GetLen() * 0.8f;
     }
 
     void Update()
